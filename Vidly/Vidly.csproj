@@ -189,18 +189,45 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708091703226_InitialModel.cs" />
+    <Compile Include="Migrations\201708091703226_InitialModel.Designer.cs">
+      <DependentUpon>201708091703226_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708091729373_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201708091729373_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201708091729373_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708091734066_AddMembershipType.cs" />
+    <Compile Include="Migrations\201708091734066_AddMembershipType.Designer.cs">
+      <DependentUpon>201708091734066_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708091737144_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201708091737144_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201708091737144_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708091747492_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201708091747492_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201708091747492_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -257,6 +284,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -275,6 +305,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708091703226_InitialModel.resx">
+      <DependentUpon>201708091703226_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708091729373_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201708091729373_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708091734066_AddMembershipType.resx">
+      <DependentUpon>201708091734066_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708091737144_PopulateMembershipTypes.resx">
+      <DependentUpon>201708091737144_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708091747492_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201708091747492_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
