@@ -15,18 +15,18 @@ namespace Vidly.Models
 
         public Genre Genre { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The Genre field is required")]
+        [Display(Name = "Genre")]
         public int GenreId { get; set; }
 
         [Required]
         [Display(Name = "Release date")]
         public DateTime ReleaseDate { get; set; }
 
-        [Required]
-        [Display(Name = "Date added")]
         public DateTime DateAdded { get; set; }
 
         [Required]
+        [Range(1, 20)]
         [Display(Name = "Number in stock")]
         public byte NumberInStock { get; set; }
     }
